@@ -1,0 +1,1326 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+<title>BIO LAB 16 | АҮФ құрылысы және синтезі</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app">
+
+<main class="main">
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">⚡</span>
+    <div>
+      <strong>BIO LAB 16</strong>
+      <small>Биология • 1-курс • Тынысалу</small>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <div class="clock">
+      ⏱ <span id="totalClock">00:00</span>
+      <small>/ 80:00</small>
+    </div>
+    <div class="clock">
+      ⌛ <span id="sectionClock">03:00</span>
+    </div>
+    <button class="btn secondary" id="fullscreenBtn">
+      ⛶ Толық экран
+    </button>
+  </div>
+</header>
+
+<!-- 0. БАСТЫ БЕТ -->
+<section class="screen active" id="page-0">
+  <div class="hero">
+    <div class="eyebrow">16-ТАҚЫРЫП • БӨЛІМ 5. ТЫНЫСАЛУ</div>
+
+    <h1>
+      Аденозинүшфосфат
+      <span>қышқылы — АҮФ</span>
+    </h1>
+
+    <p>
+      АҮФ молекуласының құрылысы,
+      қызметі, энергия алмасуы және
+      жасушадағы синтез механизмі.
+    </p>
+
+    <div class="stats">
+      <div><b>80</b><small>минут</small></div>
+      <div><b>24</b><small>оқушыға дейін</small></div>
+      <div><b>3</b><small>команда</small></div>
+      <div><b>3</b><small>күрделі ойын</small></div>
+    </div>
+
+    <button class="btn primary large"
+            onclick="goTo(1)">
+      Сабақты бастау →
+    </button>
+  </div>
+
+  <h2>Сабақтың мақсаты</h2>
+
+  <div class="cards three">
+    <article class="card">
+      <div class="emoji">🧬</div>
+      <h3>Құрылысы</h3>
+      <p>
+        Аденин, рибоза және фосфат
+        топтарының АҮФ молекуласындағы
+        орналасуын түсіну.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🔋</div>
+      <h3>Энергия алмасуы</h3>
+      <p>
+        АҮФ гидролизін және
+        энергияның жасушалық
+        жұмыспен байланысын түсіндіру.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">⚙️</div>
+      <h3>АҮФ синтезі</h3>
+      <p>
+        Митохондрия, электрон
+        тасымалдау тізбегі және
+        АҮФ-синтаза қызметін талдау.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Сабақтың негізгі сұрағы:</b>
+    Жасуша АҮФ-ті қалай түзеді және
+    ол жасушадағы тіршілік
+    үдерістеріне энергияны
+    қалай береді?
+  </div>
+</section>
+
+<!-- 1. АҮФ ҚҰРЫЛЫСЫ -->
+<section class="screen" id="page-1">
+  <div class="eyebrow">01 • ТҮСІНДІРУ • 3 МИНУТ</div>
+
+  <h1>🧬 АҮФ молекуласының құрылысы</h1>
+
+  <p class="lead">
+    Аденозинүшфосфат (АҮФ, ATP) —
+    жасушаларда энергия алмасуына
+    тікелей қатысатын нуклеотид.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/230%20Structure%20of%20Adenosine%20Triphosphate%20%28ATP%29-01.jpg"
+        alt="АҮФ молекуласының химиялық құрылысы">
+      <figcaption>
+        АҮФ құрылысы: аденин,
+        рибоза, үш фосфат тобы.
+        OpenStax / Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/ATP%20structure%20revised.png"
+        alt="Аденозинүшфосфат молекуласының құрылымдық формуласы">
+      <figcaption>
+        АҮФ-тің химиялық формуласы.
+        Wikimedia Commons.
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="atp-diagram">
+    <h3>АҮФ-тің қарапайым сызбасы</h3>
+
+    <div class="molecule">
+      <span class="adenine">АДЕНИН</span>
+      <span class="join">—</span>
+      <span class="ribose">РИБОЗА</span>
+      <span class="join">—</span>
+      <span class="phosphate">P</span>
+      <span class="join">~</span>
+      <span class="phosphate">P</span>
+      <span class="join">~</span>
+      <span class="phosphate">P</span>
+    </div>
+
+    <p>
+      Аденин + рибоза = аденозин.
+      Аденозин + үш фосфат тобы = АҮФ.
+    </p>
+  </div>
+
+  <div class="cards three">
+    <article class="card">
+      <h3>1. Аденин</h3>
+      <p>
+        Пуриндік азотты негіз.
+        АҮФ молекуласының
+        азотты негіз бөлігін құрайды.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>2. Рибоза</h3>
+      <p>
+        Бес көміртекті қант.
+        Аденин мен фосфаттар
+        осы қант арқылы байланысады.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>3. Үш фосфат</h3>
+      <p>
+        α, β және γ фосфат топтары.
+        Олардың арасындағы
+        фосфоангидридтік байланыстар
+        энергия алмасуында маңызды.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Есте сақта:</b>
+    АҮФ — жеке органоид емес.
+    Ол жасушаның энергия алмасуына
+    қатысатын молекула.
+  </div>
+</section>
+
+<!-- 2. АҮФ ЖӘНЕ АДФ -->
+<section class="screen" id="page-2">
+  <div class="eyebrow">02 • ТҮСІНДІРУ • 3 МИНУТ</div>
+
+  <h1>🔋 АҮФ және АДФ айналымы</h1>
+
+  <p class="lead">
+    Жасуша энергия қажет ететін
+    үдерістерді АҮФ гидролизімен
+    байланыстыра алады.
+    АҮФ қайта синтезделіп,
+    бірнеше рет пайдаланылады.
+  </p>
+
+  <div class="formula-panel">
+    <h3>АҮФ гидролизі</h3>
+
+    <div class="big-formula">
+      АҮФ + H₂O → АДФ + Pi
+    </div>
+
+    <p>
+      Pi — бейорганикалық фосфат.
+      Бұл реакцияның жалпы нәтижесінде
+      бос энергия бөлінеді.
+    </p>
+  </div>
+
+  <div class="atp-cycle">
+    <div class="cycle-node">
+      <span>⚡</span>
+      <strong>АҮФ</strong>
+      <small>Үш фосфат</small>
+    </div>
+
+    <div class="cycle-arrow">⇄</div>
+
+    <div class="cycle-node alt">
+      <span>🔄</span>
+      <strong>АДФ + Pi</strong>
+      <small>Екі фосфат + Pi</small>
+    </div>
+  </div>
+
+  <div class="toolbar center">
+    <button id="cycleBtn" class="btn primary">
+      ⚡ Айналымды көрсету
+    </button>
+  </div>
+
+  <div id="cycleExplanation" class="callout">
+    Батырманы басып,
+    АҮФ гидролизі мен
+    қайта синтезін салыстыр.
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Гидролиз</h3>
+      <p>
+        АҮФ сумен әрекеттесіп,
+        АДФ пен бейорганикалық
+        фосфатқа айналады.
+        Реакцияның жалпы бос
+        энергия өзгерісі теріс.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Қайта синтез</h3>
+      <p>
+        АДФ + Pi негізінде АҮФ түзу
+        үшін энергия қажет.
+        Бұл энергия тыныс алу
+        немесе фотосинтез
+        үдерістерінен алына алады.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Маңызды ғылыми ескерту:</b>
+    энергия тек байланысты үзу
+    әрекетінен өздігінен бөлінбейді.
+    АҮФ гидролизі өнімдерінің
+    салыстырмалы тұрақтылығы
+    реакцияның жалпы энергия
+    өзгерісін түсіндіреді.
+  </div>
+</section>
+
+<!-- 3. АҮФ ҚЫЗМЕТІ -->
+<section class="screen" id="page-3">
+  <div class="eyebrow">03 • ТҮСІНДІРУ • 3 МИНУТ</div>
+
+  <h1>⚡ АҮФ-тің жасушадағы қызметі</h1>
+
+  <p class="lead">
+    АҮФ — жасушадағы энергияны
+    беру мен пайдалануға
+    қатысатын маңызды қосылыс.
+  </p>
+
+  <div class="cards three">
+    <article class="card">
+      <div class="emoji">💪</div>
+      <h3>Бұлшықет жұмысы</h3>
+      <p>
+        Бұлшықеттің жиырылу
+        механизміне қажет
+        энергиямен байланысты.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🚪</div>
+      <h3>Белсенді тасымал</h3>
+      <p>
+        Мембрана арқылы
+        иондарды концентрация
+        градиентіне қарсы
+        тасымалдауға қатысады.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🧪</div>
+      <h3>Заттардың синтезі</h3>
+      <p>
+        Нәруыздар мен басқа
+        күрделі молекулалардың
+        түзілуіндегі энергия
+        шығынына қатысады.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🧬</div>
+      <h3>РНҚ синтезі</h3>
+      <p>
+        АҮФ РНҚ түзілуіне
+        қажетті нуклеотидтердің
+        бірі болып табылады.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">📡</div>
+      <h3>Сигнал беру</h3>
+      <p>
+        АҮФ жасушалық
+        фосфорлану реакцияларына
+        қатысады және цАМФ
+        сияқты молекулалардың
+        түзілуіне негіз бола алады.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🔁</div>
+      <h3>Энергия айналымы</h3>
+      <p>
+        АҮФ тұрақты түрде
+        жұмсалып, қайтадан
+        синтезделеді.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Талдау тапсырмасы:</b>
+    Егер жасушада АҮФ мөлшері
+    күрт азайса, белсенді
+    тасымал мен биосинтезге
+    қандай әсер болуы мүмкін?
+  </div>
+</section>
+
+<!-- 4. МИТОХОНДРИЯ -->
+<section class="screen" id="page-4">
+  <div class="eyebrow">04 • ТҮСІНДІРУ • 3 МИНУТ</div>
+
+  <h1>🏭 Митохондрияның құрылысы</h1>
+
+  <p class="lead">
+    Эукариот жасушаларында
+    аэробты тыныс алу кезінде
+    АҮФ түзілуінің маңызды
+    кезеңдері митохондрияда өтеді.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Mitochondrion%20structure.svg?width=900"
+        alt="Митохондрияның құрылысы">
+      <figcaption>
+        Митохондрияның құрылымдық
+        сызбасы. Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/ATP%20synthase.svg?width=850"
+        alt="АҮФ-синтаза ферментінің құрылысы">
+      <figcaption>
+        АҮФ-синтазаның құрылысы.
+        Wikimedia Commons.
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Сыртқы мембрана</h3>
+      <p>
+        Митохондрияны
+        цитоплазмадан бөліп
+        тұратын қабық.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Ішкі мембрана</h3>
+      <p>
+        Электрон тасымалдау
+        тізбегінің кешендері
+        мен АҮФ-синтаза осы
+        мембранада орналасады.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Кристалар</h3>
+      <p>
+        Ішкі мембрананың
+        қатпарлары, оның
+        беткі ауданын арттырады.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Матрикс</h3>
+      <p>
+        Митохондрияның ішкі
+        сұйық ортасы.
+        Кребс цикліне
+        қатысатын реакциялар
+        осы жерде жүреді.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Сұрақ:</b>
+    АҮФ-синтаза неліктен
+    митохондрияның ішкі
+    мембранасында орналасқан?
+  </div>
+</section>
+
+<!-- 5. АҮФ СИНТЕЗІ -->
+<section class="screen" id="page-5">
+  <div class="eyebrow">05 • ТҮСІНДІРУ • 3 МИНУТ</div>
+
+  <h1>⚙️ АҮФ синтезінің механизмдері</h1>
+
+  <p class="lead">
+    АҮФ синтезі —
+    АДФ пен бейорганикалық
+    фосфаттан энергия
+    жұмсалып АҮФ түзілуі.
+  </p>
+
+  <div class="formula-panel">
+    <h3>Жалпыланған теңдеу</h3>
+
+    <div class="big-formula">
+      АДФ + Pi + энергия → АҮФ
+    </div>
+  </div>
+
+  <div class="cards three">
+    <article class="card">
+      <h3>1. Субстраттық фосфорлану</h3>
+      <p>
+        Фосфат тобы жоғары
+        энергиялы аралық
+        қосылыстан тікелей
+        АДФ-ке беріледі.
+        Гликолизде және
+        Кребс циклінің бір
+        кезеңінде кездеседі.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>2. Тотығу фосфорлануы</h3>
+      <p>
+        Митохондрияда электрон
+        тасымалдау тізбегі
+        туғызған протондар
+        градиенті АҮФ-синтазаны
+        іске қосады.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>3. Фотофосфорлану</h3>
+      <p>
+        Фотосинтез кезінде
+        хлоропласттың
+        тилакоид мембранасында
+        жарық энергиясымен
+        байланысты протондық
+        градиент арқылы
+        АҮФ түзіледі.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Маңызды айырмашылық:</b>
+    Субстраттық фосфорлануда
+    фосфат тікелей беріледі.
+    Ал тотығу фосфорлануы
+    мембранадағы протондық
+    градиент пен АҮФ-синтазаны
+    қажет етеді.
+  </div>
+</section>
+
+<!-- 6. ЭЛЕКТРОН ТАСЫМАЛДАУ -->
+<section class="screen" id="page-6">
+  <div class="eyebrow">06 • ТҮСІНДІРУ • 3 МИНУТ</div>
+
+  <h1>🔬 Электрон тасымалдау және хемиосмос</h1>
+
+  <p class="lead">
+    Тыныс алуда электрондар
+    тізбек бойымен өтіп,
+    протондар градиентін
+    қалыптастыруға қатысады.
+    Бұл градиент АҮФ
+    синтезіне энергия береді.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Electron%20transport%20chain.svg?width=1100"
+        alt="Митохондриядағы электрон тасымалдау тізбегі">
+      <figcaption>
+        Электрон тасымалдау
+        тізбегінің ғылыми сызбасы.
+        Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Atp%20synthase.PNG?width=750"
+        alt="АҮФ-синтазаның молекулалық моделі">
+      <figcaption>
+        АҮФ-синтазаның
+        молекулалық моделі.
+        Wikimedia Commons.
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <b>1</b>
+      <span>
+        NADH және FADH₂
+        электрондарын тізбекке береді.
+      </span>
+    </div>
+
+    <div class="step">
+      <b>2</b>
+      <span>
+        Электрондар мембраналық
+        кешендер арқылы өтеді.
+      </span>
+    </div>
+
+    <div class="step">
+      <b>3</b>
+      <span>
+        Кей кешендер H⁺ иондарын
+        мембранааралық кеңістікке
+        айдайды.
+      </span>
+    </div>
+
+    <div class="step">
+      <b>4</b>
+      <span>
+        Протондар электрохимиялық
+        градиент түзеді.
+      </span>
+    </div>
+
+    <div class="step">
+      <b>5</b>
+      <span>
+        H⁺ АҮФ-синтаза арқылы
+        матрикске қайта өтеді.
+      </span>
+    </div>
+
+    <div class="step">
+      <b>6</b>
+      <span>
+        АҮФ-синтаза АДФ пен
+        Pi-ден АҮФ түзеді.
+      </span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>Оттегінің рөлі:</b>
+    аэробты тыныс алуда
+    оттегі — электрондардың
+    соңғы акцепторы.
+    Ол электрондар мен
+    протондарды қабылдап,
+    су түзілуіне қатысады.
+  </div>
+</section>
+
+<!-- 7. YOUTUBE -->
+<section class="screen" id="page-7">
+  <div class="eyebrow">07 • БЕЙНЕСАБАҚ • 6 МИНУТ</div>
+
+  <h1>▶️ Қазақша YouTube сабақтары</h1>
+
+  <p class="lead">
+    Бірінші бейнеден АҮФ
+    құрылысын, екіншісінен
+    АҮФ синтезін көріңдер.
+    Маңызды бөліктерін талқылаңдар.
+  </p>
+
+  <div class="toolbar">
+    <button class="btn primary" data-video="0">
+      ▶ АҮФ құрылысы мен қызметі
+    </button>
+
+    <button class="btn secondary" data-video="1">
+      ▶ АҮФ синтезі
+    </button>
+
+    <button class="btn danger" id="stopVideo">
+      ⏹ Тоқтату
+    </button>
+  </div>
+
+  <div class="video-frame">
+    <iframe id="videoPlayer"
+      src="about:blank"
+      title="АҮФ тақырыбы бойынша видеосабақ"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+
+  <p id="videoTitle" class="feedback">
+    Көру үшін бейне таңда.
+  </p>
+
+  <a id="videoLink"
+     href="https://www.youtube.com/watch?v=VU-XlcCKcMQ"
+     target="_blank"
+     rel="noopener noreferrer">
+    ▶ Видео ашылмаса, YouTube-та ашу
+  </a>
+
+  <div class="card">
+    <h3>Бейне бойынша талқылау</h3>
+
+    <ol class="reading-list">
+      <li>
+        АҮФ құрылымындағы үш фосфат
+        тобының маңызы қандай?
+      </li>
+      <li>
+        АҮФ пен АДФ арасында
+        қандай айырмашылық бар?
+      </li>
+      <li>
+        АҮФ-синтаза энергияны
+        қайдан алады?
+      </li>
+      <li>
+        Оттегі жетіспесе, тотығу
+        фосфорлануына не болады?
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8. КОНСПЕКТ -->
+<section class="screen" id="page-8">
+  <div class="eyebrow">08 • КОНСПЕКТ • 14 МИНУТ</div>
+
+  <h1>📚 Толық конспект</h1>
+
+  <p class="lead">
+    Алғашқы 12 бөлімді
+    дәптерге жазуға болады.
+    Қалған бөлімдер —
+    күрделі тапсырмаларға
+    арналған қосымша түсіндірме.
+  </p>
+
+  <div class="notes" id="notesContent">
+
+    <h2>
+      §16. Аденозинүшфосфат
+      қышқылының құрылысы,
+      қызметі және синтезі
+    </h2>
+
+    <h3>1. Энергия алмасу</h3>
+    <p>
+      Барлық тірі жасушаларда
+      энергия алмасу жүреді.
+      Жасуша энергияны
+      биосинтезге, белсенді
+      тасымалға, қозғалысқа
+      және басқа да тіршілік
+      үдерістеріне жұмсайды.
+    </p>
+
+    <h3>2. АҮФ дегеніміз не?</h3>
+    <p>
+      Аденозинүшфосфат қышқылы,
+      қысқаша АҮФ немесе ATP —
+      жасушаның энергия алмасуында
+      негізгі рөл атқаратын
+      нуклеотид. Ол энергияны
+      қажет ететін реакциялармен
+      энергия бөлетін реакцияларды
+      байланыстырады.
+    </p>
+
+    <h3>3. АҮФ молекуласының құрылысы</h3>
+    <p>
+      АҮФ молекуласы үш
+      негізгі бөліктен тұрады:
+      азотты негіз аденин,
+      бес көміртекті қант
+      рибоза және үш
+      фосфат тобы.
+    </p>
+
+    <h3>4. Аденозин</h3>
+    <p>
+      Аденин мен рибозаның
+      қосылуынан аденозин
+      түзіледі. Аденозинге
+      үш фосфат тобы
+      жалғанғанда АҮФ
+      молекуласы пайда болады.
+    </p>
+
+    <h3>5. Фосфат топтары</h3>
+    <p>
+      АҮФ молекуласындағы
+      фосфаттар α, β және γ
+      деп аталады.
+      Олардың арасындағы
+      фосфоангидридтік
+      байланыстар энергия
+      алмасуында маңызды.
+    </p>
+
+    <h3>6. АҮФ гидролизі</h3>
+    <p>
+      АҮФ сумен әрекеттескенде
+      АДФ пен бейорганикалық
+      фосфат түзіледі.
+      Бұл реакцияның жалпы
+      нәтижесінде бос
+      энергия бөлінеді.
+      Жеңілдетілген теңдеу:
+      АҮФ + H₂O → АДФ + Pi.
+    </p>
+
+    <h3>7. АДФ дегеніміз не?</h3>
+    <p>
+      Аденозиндифосфат,
+      қысқаша АДФ —
+      құрамында екі фосфат
+      тобы бар молекула.
+      Оған тағы бір фосфат
+      жалғанғанда АҮФ
+      синтезделе алады.
+    </p>
+
+    <h3>8. АҮФ-тің негізгі қызметтері</h3>
+    <p>
+      АҮФ бұлшықет жиырылуына,
+      мембранадағы белсенді
+      тасымалға, күрделі
+      заттардың синтезіне
+      және жасушадағы
+      көптеген реакцияларға
+      энергия беруге қатысады.
+    </p>
+
+    <h3>9. АҮФ синтезі</h3>
+    <p>
+      АҮФ синтезі —
+      АДФ пен бейорганикалық
+      фосфаттан энергия
+      жұмсалу арқылы АҮФ
+      молекуласының түзілуі.
+      Жалпыланған теңдеу:
+      АДФ + Pi + энергия → АҮФ.
+    </p>
+
+    <h3>10. Субстраттық фосфорлану</h3>
+    <p>
+      Субстраттық фосфорлануда
+      фосфат тобы арнайы
+      органикалық қосылыстан
+      тікелей АДФ-ке беріледі.
+      Бұл үдеріс гликолизде
+      және Кребс циклінің
+      бір реакциясында
+      жүзеге асады.
+    </p>
+
+    <h3>11. Тотығу фосфорлануы</h3>
+    <p>
+      Тотығу фосфорлануы
+      эукариот жасушасының
+      митохондриясында жүреді.
+      Электрон тасымалдау
+      тізбегі протондық
+      градиент қалыптастырады.
+      Сол градиент энергиясы
+      АҮФ-синтаза арқылы
+      АҮФ түзуге жұмсалады.
+    </p>
+
+    <h3>12. Митохондрияның маңызы</h3>
+    <p>
+      Митохондрия екі
+      мембранадан тұрады.
+      Оның ішкі мембранасында
+      электрон тасымалдау
+      тізбегі мен АҮФ-синтаза
+      орналасады. Матриксте
+      Кребс цикліне қатысатын
+      реакциялар жүреді.
+    </p>
+
+    <hr>
+
+    <h2>Тереңдетілген түсіндірме</h2>
+
+    <h3>13. Электрон тасымалдау тізбегі</h3>
+    <p>
+      NADH және FADH₂
+      электрондарын тасымалдау
+      тізбегіне береді.
+      Электрондардың
+      мембраналық кешендер
+      арқылы өтуі энергияның
+      бір бөлігін протондарды
+      айдауға пайдалануға
+      мүмкіндік береді.
+    </p>
+
+    <h3>14. Протондық градиент</h3>
+    <p>
+      Протондардың мембрананың
+      екі жағында әртүрлі
+      мөлшерде жиналуы
+      электрохимиялық
+      градиент түзеді.
+      Бұл градиентте
+      АҮФ синтезіне қажетті
+      потенциалдық энергия бар.
+    </p>
+
+    <h3>15. АҮФ-синтаза</h3>
+    <p>
+      АҮФ-синтаза —
+      мембранадағы күрделі
+      ферменттік кешен.
+      Протондардың осы кешен
+      арқылы өтуі оның
+      молекулалық қозғалысына
+      әкеліп, АДФ пен Pi-ден
+      АҮФ түзілуін қамтамасыз етеді.
+    </p>
+
+    <h3>16. Хемиосмос</h3>
+    <p>
+      Хемиосмос —
+      протондардың
+      электрохимиялық
+      градиент бойынша
+      мембранадан өтуімен
+      байланысты үдеріс.
+      Ол АҮФ түзілуінде
+      маңызды қызмет атқарады.
+    </p>
+
+    <h3>17. Оттегінің рөлі</h3>
+    <p>
+      Аэробты тыныс алу
+      кезінде оттегі
+      электрон тасымалдау
+      тізбегіндегі соңғы
+      электрон акцепторы
+      болады. Ол электрондар
+      мен протондарды
+      қабылдап, су түзіледі.
+    </p>
+
+    <h3>18. Фотофосфорлану</h3>
+    <p>
+      Өсімдіктерде
+      фотосинтездің жарық
+      реакциялары кезінде
+      хлоропласттың тилакоид
+      мембранасында
+      протондық градиент
+      қалыптасып,
+      АҮФ синтезделеді.
+    </p>
+
+    <h3>19. АҮФ және зат алмасу</h3>
+    <p>
+      Катаболизм кезінде
+      органикалық заттар
+      ыдырап, энергия
+      бөлінеді. Бұл энергияның
+      бір бөлігі АҮФ
+      синтезіне жұмсалады.
+      Ал АҮФ энергияны
+      қажет ететін
+      анаболизм реакцияларымен
+      байланыса алады.
+    </p>
+
+    <h3>20. Қорытынды</h3>
+    <p>
+      АҮФ — жасушадағы
+      энергия алмасуының
+      негізгі молекулаларының бірі.
+      Оның құрамында аденин,
+      рибоза және үш
+      фосфат тобы бар.
+      АҮФ гидролизі
+      жасушалық жұмыспен
+      байланысады, ал АҮФ
+      әртүрлі фосфорлану
+      механизмдері арқылы
+      қайта синтезделеді.
+    </p>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn primary" id="copyNotes">
+      📋 Конспектіні көшіру
+    </button>
+    <button class="btn secondary"
+            onclick="window.print()">
+      🖨 Басып шығару
+    </button>
+  </div>
+</section>
+
+<!-- 9. ҚАТЫСУШЫЛАР -->
+<section class="screen" id="page-9">
+  <div class="eyebrow">09 • ТАПСЫРМАЛАРҒА ДАЙЫНДЫҚ • 3 МИНУТ</div>
+
+  <h1>👥 Қатысушыларды белгілеу</h1>
+
+  <p class="lead">
+    24 оқушының есімі алдын ала
+    енгізілген. Келмегендерді
+    «Алып тастау» арқылы
+    қатысушылар тізімінен шығар.
+    Олар жеке тапсырмаларға
+    да, ойындарға да қатыспайды.
+  </p>
+
+  <div class="summary-grid">
+    <div>
+      <span>Қатысады</span>
+      <strong id="presentCount">24</strong>
+    </div>
+    <div>
+      <span>Қатыспайды</span>
+      <strong id="absentCount">0</strong>
+    </div>
+    <div>
+      <span>Команда</span>
+      <strong id="teamCount">3</strong>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn secondary" id="allPresent">
+      ✅ Барлығын қайтару
+    </button>
+  </div>
+
+  <h2>Қатысатын оқушылар</h2>
+  <div class="student-grid" id="presentList"></div>
+
+  <div class="card">
+    <h3>❌ Қатыспайтын оқушылар</h3>
+    <div id="absentList"></div>
+  </div>
+
+  <p class="feedback" id="attendanceFeedback"></p>
+
+  <h2>Автоматты бөлінген командалар</h2>
+  <div class="team-grid" id="teamRoster"></div>
+</section>
+
+<!-- 10. АУЫЗША -->
+<section class="screen" id="page-10">
+  <div class="eyebrow">10 • АУЫЗША СҰРАҚ • 16 МИНУТ</div>
+
+  <h1>🎤 Random Student — күрделі сұрақ</h1>
+
+  <p class="lead">
+    «Рандом таңдау» батырмасы
+    әлі жауап бермеген
+    қатысушылардың арасынан
+    оқушыны кездейсоқ таңдайды.
+    Жауап ғылыми дәлелмен берілуі керек.
+  </p>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="oralProgressText">0 / 24</span>
+      <span class="points">Максимум 3 ұпай</span>
+    </div>
+
+    <div class="chosen-student" id="oralStudent">
+      🎲 Кездейсоқ таңдау
+    </div>
+
+    <h2 id="oralQuestion">
+      Оқушыны таңдау батырмасын бас.
+    </h2>
+
+    <div class="answer-panel"
+         id="oralAnswer"
+         hidden></div>
+
+    <div class="toolbar">
+      <button class="btn primary" id="oralPick">
+        🎲 Рандом таңдау
+      </button>
+      <button class="btn secondary" id="oralReveal">
+        👁 Жауапты көрсету
+      </button>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn success oral-grade"
+              data-points="3">
+        ✅ 3 ұпай
+      </button>
+      <button class="btn secondary oral-grade"
+              data-points="2">
+        🟡 2 ұпай
+      </button>
+      <button class="btn secondary oral-grade"
+              data-points="1">
+        🟠 1 ұпай
+      </button>
+      <button class="btn danger oral-grade"
+              data-points="0">
+        ❌ 0 ұпай
+      </button>
+    </div>
+
+    <p class="feedback" id="oralFeedback"></p>
+  </div>
+
+  <h2>Ауызша жауап нәтижелері</h2>
+  <div class="progress-grid" id="oralResults"></div>
+</section>
+
+<!-- 11. ЖЕКЕ ТЕСТ -->
+<section class="screen" id="page-11">
+  <div class="eyebrow">11 • ЖЕКЕ ТЕСТ • 6 МИНУТ</div>
+
+  <h1>🧠 Рандом жеке тест</h1>
+
+  <p class="lead">
+    Әр оқушыға жеке,
+    талдау қажет ететін
+    тест беріледі.
+    Дұрыс жауап +2 ұпай.
+  </p>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="quizProgressText">0 / 24</span>
+      <span class="points">Дұрыс +2 ұпай</span>
+    </div>
+
+    <div class="chosen-student" id="quizStudent">
+      🎲 Оқушыны таңдау
+    </div>
+
+    <h2 id="quizQuestion">
+      Рандом таңдау батырмасын бас.
+    </h2>
+
+    <div id="quizOptions" class="choices"></div>
+
+    <div class="toolbar">
+      <button class="btn primary" id="quizPick">
+        🎲 Рандом таңдау
+      </button>
+      <button class="btn success" id="quizCheck">
+        ✅ Жауапты тексеру
+      </button>
+    </div>
+
+    <p class="feedback" id="quizFeedback"></p>
+  </div>
+
+  <h2>Жеке тест нәтижелері</h2>
+  <div class="progress-grid" id="quizResults"></div>
+</section>
+
+<!-- 12. 1-ОЙЫН -->
+<section class="screen" id="page-12">
+  <div class="eyebrow">12 • 1-ОЙЫН • 4 МИНУТ</div>
+
+  <h1>⚡ ENERGY BATTLE</h1>
+
+  <p class="lead">
+    Үш командаға тоғыз
+    ғылыми жағдаят беріледі.
+    Дұрыс жауап +3 ұпай.
+    Әр команда үш рет жауап береді.
+  </p>
+
+  <div class="team-grid" id="game1Scores"></div>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="battleNumber">1 / 9</span>
+      <span class="points" id="battleTeam"></span>
+    </div>
+
+    <div class="progress-track">
+      <div id="battleBar"></div>
+    </div>
+
+    <h2 id="battleQuestion"></h2>
+    <div id="battleOptions" class="choices"></div>
+
+    <div class="toolbar">
+      <button class="btn success" id="battleCheck">
+        ✅ Тексеру
+      </button>
+      <button class="btn primary" id="battleNext">
+        Келесі жағдаят →
+      </button>
+    </div>
+
+    <p class="feedback" id="battleFeedback"></p>
+  </div>
+</section>
+
+<!-- 13. 2-ОЙЫН -->
+<section class="screen" id="page-13">
+  <div class="eyebrow">13 • 2-ОЙЫН • 3 МИНУТ</div>
+
+  <h1>🧩 Ғылыми детектив</h1>
+
+  <p class="lead">
+    Әр команда төрт тұжырымның
+    дұрыс немесе қате екенін
+    анықтап, дәлелдейді.
+    Әр дұрыс шешім +1 ұпай.
+  </p>
+
+  <div class="team-grid" id="game2Scores"></div>
+  <div id="logicArea"></div>
+</section>
+
+<!-- 14. 3-ОЙЫН -->
+<section class="screen" id="page-14">
+  <div class="eyebrow">14 • 3-ОЙЫН • 3 МИНУТ</div>
+
+  <h1>🎨 АҮФ зертханасы</h1>
+
+  <p class="lead">
+    Әр команда дәптерге
+    немесе А4 қағазына
+    ғылыми сызба жасап,
+    механизмін түсіндіреді.
+    Максимум +5 ұпай.
+  </p>
+
+  <div class="team-grid" id="game3Scores"></div>
+  <div id="creativeArea"></div>
+</section>
+
+<!-- 15. ҚОРЫТЫНДЫ -->
+<section class="screen" id="page-15">
+  <div class="eyebrow">15 • ҚОРЫТЫНДЫ • 4 МИНУТ</div>
+
+  <h1>🏆 Сабақтың қорытындысы</h1>
+
+  <div class="winner" id="winner"></div>
+
+  <h2>Командалардың нәтижелері</h2>
+  <div class="team-grid" id="finalScores"></div>
+
+  <h2>Оқушылардың жеке бағалары</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Оқушы</th>
+          <th>Команда</th>
+          <th>Ауызша</th>
+          <th>Тест</th>
+          <th>Барлығы</th>
+        </tr>
+      </thead>
+      <tbody id="studentResults"></tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <b>Негізгі қорытынды:</b>
+    АҮФ — жасушаның
+    энергия алмасуына
+    қатысатын молекула.
+    Ол гидролиз кезінде
+    энергия қажет ететін
+    реакцияларды қолдайды.
+    Ал АҮФ синтезі
+    ферменттер мен
+    энергия көздерінің
+    көмегімен жүреді.
+  </div>
+
+  <div class="toolbar">
+    <button class="btn secondary"
+            onclick="window.print()">
+      🖨 Нәтижені шығару
+    </button>
+    <button class="btn danger" id="resetLesson">
+      🔄 Жаңа сабақ
+    </button>
+  </div>
+
+  <footer>MADE BY DARKHAN • BIO LAB 16</footer>
+</section>
+
+<div class="bottom-nav">
+  <button class="btn secondary" id="previousPage">
+    ← Артқа
+  </button>
+  <span id="pageIndicator">1 / 16</span>
+  <button class="btn primary" id="nextPage">
+    Келесі →
+  </button>
+</div>
+
+</main>
+
+<!-- ОҢ ЖАҚ МӘЗІР -->
+<aside class="sidebar">
+  <div class="sidebar-logo">⚡ BIO LAB 16</div>
+
+  <nav id="sidebarNav">
+    <button class="nav-btn active" data-page="0">🏠 Басты бет</button>
+    <button class="nav-btn" data-page="1">🧬 АҮФ құрылысы</button>
+    <button class="nav-btn" data-page="2">🔋 АҮФ / АДФ</button>
+    <button class="nav-btn" data-page="3">⚡ АҮФ қызметі</button>
+    <button class="nav-btn" data-page="4">🏭 Митохондрия</button>
+    <button class="nav-btn" data-page="5">⚙️ Синтез жолдары</button>
+    <button class="nav-btn" data-page="6">🔬 Хемиосмос</button>
+    <button class="nav-btn" data-page="7">▶️ YouTube</button>
+    <button class="nav-btn" data-page="8">📚 Конспект</button>
+    <button class="nav-btn" data-page="9">👥 Қатысушылар</button>
+    <button class="nav-btn" data-page="10">🎤 Ауызша</button>
+    <button class="nav-btn" data-page="11">🧠 Жеке тест</button>
+    <button class="nav-btn" data-page="12">⚡ 1-ойын</button>
+    <button class="nav-btn" data-page="13">🧩 2-ойын</button>
+    <button class="nav-btn" data-page="14">🎨 3-ойын</button>
+    <button class="nav-btn" data-page="15">🏆 Қорытынды</button>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div id="sidebarScores"></div>
+    <strong>BY DARKHAN</strong>
+  </div>
+</aside>
+
+</div>
+</body>
+</html>
